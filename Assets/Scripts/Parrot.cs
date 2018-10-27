@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Parrot : MonoBehaviour 
 {
-	const float lifeTime = 2.0f;
+	const float lifeTime = 4.0f;
 
 	float timer = 0.0f;
 

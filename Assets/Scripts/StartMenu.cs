@@ -34,7 +34,6 @@ public class StartMenu : MonoBehaviour
 
 	public void PressPlay()
 	{
-		Debug.Log("PLAAAAAAAAAAY");
 		gameObject.SetActive(false);
 
 		healthCounter.SetActive(true);
