@@ -23,11 +23,13 @@ public class GameOverMenu : MonoBehaviour
 		SpawnManager.Restart();
 
 		canvasGroup.alpha = 0.0f;
+		canvasGroup.interactable = false;
 	}
 
 	void HandleGameOver()
 	{
 		canvasGroup.alpha = 1.0f;
+		canvasGroup.interactable = true;
 
 		if(SpawnManager.IsAlive)
 		{
