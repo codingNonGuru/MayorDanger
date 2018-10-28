@@ -9,7 +9,10 @@ public class GameOverMenu : MonoBehaviour
 	CanvasGroup canvasGroup = null;
 
 	[SerializeField]
-	Text label = null;
+	GameObject vremuriGrele = null;
+
+	[SerializeField]
+	GameObject saTraiti = null;
 
     public AudioSource EndGameWin;
     // Use this for initialization
@@ -33,12 +36,14 @@ public class GameOverMenu : MonoBehaviour
 
 		if(SpawnManager.IsAlive)
 		{
-			label.text = "Sa traiti,\ndom' Primar!";
+			vremuriGrele.SetActive(false);
+			saTraiti.SetActive(true);
             EndGameWin.Play();
 		}
 		else
 		{
-			label.text = "Vremuri grele,\nce sa facem?!";
+			vremuriGrele.SetActive(true);
+			saTraiti.SetActive(false);
 		}
 	}
 }
