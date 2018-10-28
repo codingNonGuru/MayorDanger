@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthCounter : MonoBehaviour 
 {
 	[SerializeField]
-	Text label = null;
+	List <GameObject> votes = null;
 
 	// Use this for initialization
 	void Start () 
@@ -20,7 +20,12 @@ public class HealthCounter : MonoBehaviour
 
 	void HandleCitizenFinished()
 	{
-		label.text = string.Format("Health: {0}", SpawnManager.HitpointCount);
+		int index = 0;
+		foreach(var vote in votes)
+		{
+			vote.SetActive(index < SpawnManager.HitpointCount);
+			index++;
+		}
 	}
 	
 }
