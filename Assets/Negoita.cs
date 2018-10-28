@@ -103,23 +103,15 @@ public class Negoita : MonoBehaviour
 
 		var worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-		var direction = worldPosition - transform.position;
-		direction.Normalize();
+		var forward = Camera.main.transform.forward;
+		float t = (transform.position.y - worldPosition.y) / forward.y;
+
+		var destination = worldPosition + t * forward;
+		var direction = (destination - transform.position).normalized;
 
 		var parrotObject = Instantiate(parrotPrefab);
 
 		parrotObject.transform.position = transform.position;
-
-		var soilDirection = direction;
-		soilDirection.y = 0.0f;
-		soilDirection.Normalize();
-
-		float angle = Vector3.Dot(direction, soilDirection);
-		angle = 57.297f * Mathf.Acos(angle);
-
-		direction = Quaternion.AngleAxis(angle, Camera.main.transform.right) * direction;
-		direction.Normalize();
-		direction.y = 0.0f;
 
 		var parrot = parrotObject.GetComponent<Parrot>();
 		parrot.Direction = direction;

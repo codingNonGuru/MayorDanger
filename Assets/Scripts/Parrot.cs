@@ -28,7 +28,7 @@ public class Parrot : MonoBehaviour
 	{
 		timer += Time.deltaTime;
 
-		transform.position += direction * 0.15f;
+		transform.position += direction * 0.2f;
 
 		if(timer > lifeTime)
 		{
