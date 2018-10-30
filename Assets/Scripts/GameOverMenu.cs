@@ -23,6 +23,7 @@ public class GameOverMenu : MonoBehaviour
 
 	public void Press()
 	{
+		Debug.Log("GAME OVER");
 		SpawnManager.Restart();
 
 		canvasGroup.alpha = 0.0f;

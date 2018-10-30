@@ -460,8 +460,10 @@ GameObject:
   - component: {fileID: 46388179}
   - component: {fileID: 46388181}
   - component: {fileID: 46388180}
+  - component: {fileID: 46388183}
+  - component: {fileID: 46388182}
   m_Layer: 5
-  m_Name: Vote (5)
+  m_Name: Vote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -518,6 +520,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 46388178}
+--- !u!95 &46388182
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 46388178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &46388183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 46388178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &76218802
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,8 +658,10 @@ GameObject:
   - component: {fileID: 107086127}
   - component: {fileID: 107086129}
   - component: {fileID: 107086128}
+  - component: {fileID: 107086131}
+  - component: {fileID: 107086130}
   m_Layer: 5
-  m_Name: Vote (1)
+  m_Name: Vote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,6 +718,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 107086126}
+--- !u!95 &107086130
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107086126}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &107086131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107086126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &146980065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,8 +2120,10 @@ GameObject:
   - component: {fileID: 401663481}
   - component: {fileID: 401663480}
   - component: {fileID: 401663479}
+  - component: {fileID: 401663482}
+  - component: {fileID: 401663483}
   m_Layer: 5
-  m_Name: Vote (9)
+  m_Name: Vote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2116,6 +2180,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &401663482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401663478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &401663483
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401663478}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &409530119
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,8 +2343,10 @@ GameObject:
   - component: {fileID: 438504700}
   - component: {fileID: 438504702}
   - component: {fileID: 438504701}
+  - component: {fileID: 438504704}
+  - component: {fileID: 438504703}
   m_Layer: 5
-  m_Name: Vote (2)
+  m_Name: Vote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2308,6 +2403,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 438504699}
+--- !u!95 &438504703
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 438504699}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &438504704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 438504699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &459372069
 GameObject:
   m_ObjectHideFlags: 0
@@ -3504,7 +3628,7 @@ RectTransform:
   m_GameObject: {fileID: 618952375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2044063428}
   m_Father: {fileID: 245822185}
@@ -3534,7 +3658,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1a3f78c2906d94b148eddd4be04252ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3bd3072145ae449ba81166468cf22cd0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3560,16 +3684,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   votes:
-  - {fileID: 2097513678}
-  - {fileID: 107086126}
-  - {fileID: 438504699}
-  - {fileID: 2048283356}
-  - {fileID: 1980866981}
-  - {fileID: 46388178}
-  - {fileID: 1421253745}
-  - {fileID: 1148784221}
-  - {fileID: 1480952955}
-  - {fileID: 401663478}
+  - {fileID: 2097513683}
+  - {fileID: 107086131}
+  - {fileID: 438504704}
+  - {fileID: 2048283361}
+  - {fileID: 1980866986}
+  - {fileID: 46388183}
+  - {fileID: 1421253750}
+  - {fileID: 1148784226}
+  - {fileID: 1480952960}
+  - {fileID: 401663482}
+  happyNegoSprite: {fileID: 21300000, guid: 3bd3072145ae449ba81166468cf22cd0, type: 3}
+  sadNegoSprite: {fileID: 21300000, guid: 7a35c6ed2be6b4147ae22dda234d27ff, type: 3}
 --- !u!1 &650754189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6064,8 +6190,10 @@ GameObject:
   - component: {fileID: 1148784222}
   - component: {fileID: 1148784224}
   - component: {fileID: 1148784223}
+  - component: {fileID: 1148784226}
+  - component: {fileID: 1148784225}
   m_Layer: 5
-  m_Name: Vote (7)
+  m_Name: Vote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6122,6 +6250,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1148784221}
+--- !u!95 &1148784225
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148784221}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1148784226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148784221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1159257033
 GameObject:
   m_ObjectHideFlags: 0
@@ -7514,8 +7671,10 @@ GameObject:
   - component: {fileID: 1421253746}
   - component: {fileID: 1421253748}
   - component: {fileID: 1421253747}
+  - component: {fileID: 1421253750}
+  - component: {fileID: 1421253749}
   m_Layer: 5
-  m_Name: Vote (6)
+  m_Name: Vote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7572,6 +7731,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1421253745}
+--- !u!95 &1421253749
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1421253745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1421253750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1421253745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1425824003
 GameObject:
   m_ObjectHideFlags: 0
@@ -7798,8 +7986,10 @@ GameObject:
   - component: {fileID: 1480952956}
   - component: {fileID: 1480952958}
   - component: {fileID: 1480952957}
+  - component: {fileID: 1480952960}
+  - component: {fileID: 1480952959}
   m_Layer: 5
-  m_Name: Vote (8)
+  m_Name: Vote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7856,6 +8046,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1480952955}
+--- !u!95 &1480952959
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1480952955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1480952960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1480952955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1549227220
 GameObject:
   m_ObjectHideFlags: 0
@@ -9455,8 +9674,10 @@ GameObject:
   - component: {fileID: 1980866982}
   - component: {fileID: 1980866984}
   - component: {fileID: 1980866983}
+  - component: {fileID: 1980866986}
+  - component: {fileID: 1980866985}
   m_Layer: 5
-  m_Name: Vote (4)
+  m_Name: Vote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9513,6 +9734,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1980866981}
+--- !u!95 &1980866985
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980866981}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1980866986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980866981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1983813804
 GameObject:
   m_ObjectHideFlags: 0
@@ -9804,9 +10054,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 167
+    m_Left: 162
     m_Right: 0
-    m_Top: 0
+    m_Top: -13
     m_Bottom: 0
   m_ChildAlignment: 3
   m_Spacing: 5.65
@@ -9858,8 +10108,10 @@ GameObject:
   - component: {fileID: 2048283357}
   - component: {fileID: 2048283359}
   - component: {fileID: 2048283358}
+  - component: {fileID: 2048283361}
+  - component: {fileID: 2048283360}
   m_Layer: 5
-  m_Name: Vote (3)
+  m_Name: Vote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9916,6 +10168,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2048283356}
+--- !u!95 &2048283360
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2048283356}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2048283361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2048283356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2053953993
 GameObject:
   m_ObjectHideFlags: 0
@@ -10292,6 +10573,8 @@ GameObject:
   - component: {fileID: 2097513679}
   - component: {fileID: 2097513681}
   - component: {fileID: 2097513680}
+  - component: {fileID: 2097513682}
+  - component: {fileID: 2097513683}
   m_Layer: 5
   m_Name: Vote
   m_TagString: Untagged
@@ -10350,6 +10633,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097513678}
+--- !u!95 &2097513682
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097513678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 849f798f073fd4ed882724a05903f718, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2097513683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097513678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9d4fc6a263f4dd38af1fcf8fb0ce67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2098710926
 GameObject:
   m_ObjectHideFlags: 0

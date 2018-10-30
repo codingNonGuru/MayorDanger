@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\StartWaveButton.cs" />
      <Compile Include="Assets\Scripts\Terrain.cs" />
      <Compile Include="Assets\Scripts\TreeBatch.cs" />
+     <Compile Include="Assets\Scripts\Vote.cs" />
      <Compile Include="Assets\Tree.cs" />
      <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
  <Reference Include="UnityEditor.StandardEvents">

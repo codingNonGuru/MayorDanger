@@ -9,6 +9,7 @@ public class Citizen : MonoBehaviour
 	public Vector3 Direction;
 
     public AudioSource ImpactParrot;
+
     [SerializeField]
 	GameObject signPrefab = null;
 
@@ -35,7 +36,7 @@ public class Citizen : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		transform.position += Direction * Time.deltaTime * 1.0f;
+		transform.position += Direction * Time.deltaTime * 0.7f;
 
 		if(isInside)
 		{

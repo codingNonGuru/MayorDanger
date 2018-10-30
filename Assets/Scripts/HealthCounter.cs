@@ -6,26 +6,41 @@ using UnityEngine.UI;
 public class HealthCounter : MonoBehaviour 
 {
 	[SerializeField]
-	List <GameObject> votes = null;
+	List <Vote> votes = null;
+
+	[SerializeField]
+	Sprite happyNegoSprite = null;
+
+	[SerializeField]
+	Sprite sadNegoSprite = null;
+
+	Image image = null;
 
 	// Use this for initialization
 	void Start () 
 	{
+		image = GetComponent<Image>();
+
 		SpawnManager.OnCitizenFinished += HandleCitizenFinished;
 
-		SpawnManager.OnGameRestarted += HandleCitizenFinished;
-
-		HandleCitizenFinished();
+		SpawnManager.OnGameRestarted += HandleGameRestarted;
 	}
 
 	void HandleCitizenFinished()
 	{
-		int index = 0;
+		votes[SpawnManager.HitpointCount].FadeOut();
+
+		image.sprite = SpawnManager.HitpointCount > 5 ? happyNegoSprite : sadNegoSprite;
+	}
+
+	void HandleGameRestarted()
+	{
 		foreach(var vote in votes)
 		{
-			vote.SetActive(index < SpawnManager.HitpointCount);
-			index++;
+			vote.Enable();
 		}
+
+		image.sprite = SpawnManager.HitpointCount > 5 ? happyNegoSprite : sadNegoSprite;
 	}
 	
 }
