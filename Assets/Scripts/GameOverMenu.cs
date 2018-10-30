@@ -14,6 +14,9 @@ public class GameOverMenu : MonoBehaviour
 	[SerializeField]
 	GameObject saTraiti = null;
 
+	[SerializeField]
+	GameObject startMenu = null;
+
     public AudioSource EndGameWin;
     // Use this for initialization
     void Start () 
@@ -23,11 +26,18 @@ public class GameOverMenu : MonoBehaviour
 
 	public void Press()
 	{
-		Debug.Log("GAME OVER");
 		SpawnManager.Restart();
 
 		canvasGroup.alpha = 0.0f;
 		canvasGroup.interactable = false;
+	}
+
+	public void PressMenu()
+	{
+		canvasGroup.alpha = 0.0f;
+		canvasGroup.interactable = false;
+
+		startMenu.SetActive(true);
 	}
 
 	void HandleGameOver()

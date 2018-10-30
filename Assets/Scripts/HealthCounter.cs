@@ -41,6 +41,5 @@ public class HealthCounter : MonoBehaviour
 		}
 
 		image.sprite = SpawnManager.HitpointCount > 5 ? happyNegoSprite : sadNegoSprite;
-	}
-	
+	}	
 }

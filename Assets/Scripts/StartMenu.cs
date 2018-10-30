@@ -39,6 +39,8 @@ public class StartMenu : MonoBehaviour
 		healthCounter.SetActive(true);
 
 		nextButton.SetActive(true);
+
+		SpawnManager.Restart();
 	}
 
 	public void PressInfo()
@@ -46,5 +48,12 @@ public class StartMenu : MonoBehaviour
 		gameObject.SetActive(false);
 
 		infoScreen.SetActive(true);
+	}
+
+	public void OnEnable()
+	{
+		healthCounter.SetActive(false);
+
+		nextButton.SetActive(false);
 	}
 }
