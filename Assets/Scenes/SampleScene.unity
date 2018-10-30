@@ -2579,12 +2579,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1017669742}
+        m_MethodName: PressMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2798,7 +2798,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 120}
-  m_SizeDelta: {x: 250, y: 250}
+  m_SizeDelta: {x: 250, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508414318
 MonoBehaviour:
@@ -4432,12 +4432,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1017669742}
+        m_MethodName: Press
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5785,6 +5785,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 1017669743}
   vremuriGrele: {fileID: 1826169248}
   saTraiti: {fileID: 248994880}
+  startMenu: {fileID: 1346105155}
   EndGameWin: {fileID: 592033471}
 --- !u!225 &1017669743
 CanvasGroup:
@@ -5793,7 +5794,7 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1017669740}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -7485,7 +7486,7 @@ Prefab:
     - target: {fileID: 224903778893544514, guid: 5799bd1546aba4cc0b8d56a558ad3b12,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 250
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 224903778893544514, guid: 5799bd1546aba4cc0b8d56a558ad3b12,
         type: 2}
@@ -7583,7 +7584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1346105156
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10489,7 +10490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
