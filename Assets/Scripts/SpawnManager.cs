@@ -7,7 +7,8 @@ using UnityEngine;
 public class CitizenGroupData
 {
 	public int Count;
-	public float Direction;
+	public float StartPositionFactor;
+	public int Depth;
 }
 
 [Serializable]
@@ -231,7 +232,7 @@ public class SpawnManager : MonoBehaviour
 		{
 			SpawnGroup();
 
-			yield return new WaitForSeconds(3.0f);
+			yield return new WaitForSeconds(4.0f);
 		}
 	}
 
@@ -239,30 +240,24 @@ public class SpawnManager : MonoBehaviour
 	{
 		var group = currentWave.Groups[currentGroupIndex];
 
-		float groupAngle = group.Direction;
+		var sourcePosition = new Vector3(8.0f, 0.0f, 0.0f);
 
-		var sourcePosition = new Vector3(Mathf.Cos(groupAngle), 0.0f, Mathf.Sin(groupAngle));
-		sourcePosition *= 10.0f;
-
-		for(int i = 0; i < group.Count; ++i)
+		float offset = (float)(group.Count / group.Depth - 1) / 2.0f;
+		for(int i = 0; i < group.Count / group.Depth; ++i)
 		{
-			float angle = UnityEngine.Random.Range(0.0f, 6.2831f);
-			float radius = UnityEngine.Random.Range(0.0f, 1.5f);
+			for(int j = 0; j < group.Depth; ++j)
+			{
+				var currentOffset = (float)i - offset;
+				currentOffset *= 1.3f;
+				var citizenObject = Instantiate(citizenPrefab);
+				citizenObject.transform.position = new Vector3(
+					sourcePosition.x + (float)j,
+					citizenObject.transform.position.y, 
+					sourcePosition.z + group.StartPositionFactor * 5.5f + currentOffset);
 
-			var citizenObject = Instantiate(citizenPrefab);
-			citizenObject.transform.position = new Vector3(
-				sourcePosition.x + Mathf.Cos(angle) * radius, 
-				citizenObject.transform.position.y, 
-				sourcePosition.z + Mathf.Sin(angle) * radius);
-
-			var citizen = citizenObject.GetComponent<Citizen>();
-			citizen.Camp = picketCamp;
-
-			var direction = picketCamp.transform.position - sourcePosition;
-			direction.y = 0.0f;
-			direction.Normalize();
-
-			citizen.Direction = direction;
+				var citizen = citizenObject.GetComponent<Citizen>();
+				citizen.Camp = picketCamp;
+			}
 		}
 
 		currentGroupIndex++;

@@ -8,7 +8,7 @@ public class Sign : MonoBehaviour
 
 	float timer = 0.0f;
 
-	const float lifeTime = 5.0f;
+	const float lifeTime = 10.0f;
 
 	// Use this for initialization
 	void Start () 
@@ -19,7 +19,7 @@ public class Sign : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		transform.position += Direction * Time.deltaTime * 5.0f;	
+		transform.position += Direction * Time.deltaTime * 3.0f;	
 
 		timer += Time.deltaTime;
 

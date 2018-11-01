@@ -6,6 +6,7 @@ public class Negoita : MonoBehaviour
 {
     public AudioSource ParrotTrigger;
     public AudioSource Footsteps;
+
 	[SerializeField]
 	GameObject parrotPrefab = null;
 
@@ -15,7 +16,7 @@ public class Negoita : MonoBehaviour
 	[SerializeField]
 	List <Texture> textures = null;
 
-	const float speedModifier = 0.05f;
+	const float speedModifier = 0.02f;
 
 	const float shootCooldown = 0.3f;
 
@@ -26,6 +27,15 @@ public class Negoita : MonoBehaviour
 	Vector3 lastInsidePosition;
 
 	bool wasRemoved = false;
+
+	Vector3 startPosition;
+
+	float positionFactor = 0.0f;
+
+	void Start()
+	{
+		startPosition = transform.position;
+	}
 
 	void Update()
 	{
@@ -53,39 +63,34 @@ public class Negoita : MonoBehaviour
 
 		bool hasMoved = false;
 
-		if(Input.GetKey("s"))
+		if(Input.GetKey("w"))
 		{
-			transform.position -= transform.forward * speedModifier;
-            if (!Footsteps.isPlaying)
-                Footsteps.Play();
-            
-			hasMoved = true;
-        }
-		else if(Input.GetKey("w"))
-		{
-			transform.position += transform.forward * speedModifier;
-            if (!Footsteps.isPlaying)
-                Footsteps.Play();
+			positionFactor += speedModifier;
+			if(positionFactor > 1.0f)
+			{
+				positionFactor = 1.0f;
+			}
 
 			hasMoved = true;
-        }
-
-		if(Input.GetKey("a"))
+		}
+		else if(Input.GetKey("s"))
 		{
-			transform.position -= transform.right * speedModifier;
-            if (!Footsteps.isPlaying)
-                Footsteps.Play();
+			positionFactor -= speedModifier;
+			if(positionFactor < -1.0f)
+			{
+				positionFactor = -1.0f;
+			}
 
 			hasMoved = true;
-        }
-		else if(Input.GetKey("d"))
-		{
-			transform.position += transform.right * speedModifier;
-            if (!Footsteps.isPlaying)
-                Footsteps.Play();
+		}
 
-			hasMoved = true;
-        }
+		transform.position = startPosition + positionFactor * new Vector3(0.0f, 0.0f, 5.5f);
+
+		if(hasMoved)
+		{
+			if (!Footsteps.isPlaying)
+                Footsteps.Play();
+		}
 
         if (!Input.anyKey)
             Footsteps.Stop();
@@ -98,16 +103,7 @@ public class Negoita : MonoBehaviour
 
 	void Fire()
 	{
-		var mousePosition = Input.mousePosition;
-		mousePosition.z = (Camera.main.transform.position - transform.position).magnitude;
-
-		var worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-		var forward = Camera.main.transform.forward;
-		float t = (transform.position.y - worldPosition.y) / forward.y;
-
-		var destination = worldPosition + t * forward;
-		var direction = (destination - transform.position).normalized;
+		var direction = new Vector3(1.0f, 0.0f, 0.0f);
 
 		var parrotObject = Instantiate(parrotPrefab);
 

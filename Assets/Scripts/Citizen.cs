@@ -17,7 +17,7 @@ public class Citizen : MonoBehaviour
 
 	float timer = 0.0f;
 
-	const float cooldown = 2.0f;
+	const float cooldown = 10.0f;
 
 	int textureIndex = 0;
 
@@ -31,12 +31,14 @@ public class Citizen : MonoBehaviour
 		SpawnManager.OnGameRestarted += HandleGameRestarted;
 
 		timer = UnityEngine.Random.Range(0.0f, cooldown);
+
+		Direction = new Vector3(-1.0f, 0.0f, 0.0f);
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		transform.position += Direction * Time.deltaTime * 0.7f;
+		transform.position += Direction * Time.deltaTime * 0.6f;
 
 		if(isInside)
 		{
@@ -46,11 +48,7 @@ public class Citizen : MonoBehaviour
 				signObject.transform.position = transform.position;
 
 				var sign = signObject.GetComponent<Sign>();
-				var direction = SpawnManager.Negoita.transform.position - transform.position;
-				direction.y = 0.0f;
-				direction.Normalize();
-
-				sign.Direction = direction;
+				sign.Direction = Direction;
 
 				timer = 0.0f;
 			}
