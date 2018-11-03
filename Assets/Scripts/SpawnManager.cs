@@ -93,6 +93,11 @@ public class SpawnManager : MonoBehaviour
 		get {return instance.negoita;}
 	}
 
+	public static int CurrentWaveIndex
+	{
+		get {return instance.currentWaveIndex;}
+	}
+
 	void Awake()
 	{
 		instance = this;
