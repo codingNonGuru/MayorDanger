@@ -18,8 +18,8 @@ public class GameOverMenu : MonoBehaviour
 	GameObject startMenu = null;
 
     public AudioSource EndGameWin;
-    // Use this for initialization
-    void Start () 
+    
+    public void Setup () 
 	{
 		SpawnManager.OnGameOver += HandleGameOver;
 	}
@@ -28,23 +28,18 @@ public class GameOverMenu : MonoBehaviour
 	{
 		SpawnManager.Restart();
 
-		canvasGroup.alpha = 0.0f;
-		canvasGroup.interactable = false;
+		gameObject.SetActive(false);
 	}
 
 	public void PressMenu()
 	{
-		canvasGroup.alpha = 0.0f;
-		canvasGroup.interactable = false;
+		gameObject.SetActive(false);
 
 		startMenu.SetActive(true);
 	}
 
 	void HandleGameOver()
 	{
-		canvasGroup.alpha = 1.0f;
-		canvasGroup.interactable = true;
-
 		if(SpawnManager.IsAlive)
 		{
 			vremuriGrele.SetActive(false);
@@ -56,5 +51,7 @@ public class GameOverMenu : MonoBehaviour
 			vremuriGrele.SetActive(true);
 			saTraiti.SetActive(false);
 		}
+
+		gameObject.SetActive(true);
 	}
 }

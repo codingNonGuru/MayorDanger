@@ -73,8 +73,8 @@ public class Citizen : MonoBehaviour
 
 	void OnTriggerEnter(Collider collider)
 	{
-		var terrain = collider.gameObject.GetComponent<Terrain>();
-		if(terrain != null)
+		var shootBox = collider.gameObject.GetComponent<ShootBox>();
+		if(shootBox != null)
 		{
 			isInside = true;
 		}

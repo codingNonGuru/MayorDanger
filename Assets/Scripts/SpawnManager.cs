@@ -51,6 +51,9 @@ public class SpawnManager : MonoBehaviour
 	[SerializeField]
 	List <GameObject> pavements = null;
 
+	[SerializeField]
+	GameOverMenu gameOverMenu = null;
+
 	int currentWaveIndex = 0;
 
 	int currentGroupIndex = 0;
@@ -101,6 +104,8 @@ public class SpawnManager : MonoBehaviour
 	void Awake()
 	{
 		instance = this;
+
+		gameOverMenu.Setup();
 	}
 
 	public static void SpawnWave()
@@ -237,7 +242,7 @@ public class SpawnManager : MonoBehaviour
 		{
 			SpawnGroup();
 
-			yield return new WaitForSeconds(4.0f);
+			yield return new WaitForSeconds(5.0f);
 		}
 	}
 
@@ -245,7 +250,7 @@ public class SpawnManager : MonoBehaviour
 	{
 		var group = currentWave.Groups[currentGroupIndex];
 
-		var sourcePosition = new Vector3(8.0f, 0.0f, 0.0f);
+		var sourcePosition = new Vector3(9.3f, 0.0f, 0.0f);
 
 		float offset = (float)(group.Count / group.Depth - 1) / 2.0f;
 		for(int i = 0; i < group.Count / group.Depth; ++i)

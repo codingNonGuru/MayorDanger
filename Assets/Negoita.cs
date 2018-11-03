@@ -16,7 +16,7 @@ public class Negoita : MonoBehaviour
 	[SerializeField]
 	List <Texture> textures = null;
 
-	const float speedModifier = 0.1f;
+	const float speedModifier = 0.02f;
 
 	const float shootCooldown = 0.3f;
 
@@ -30,7 +30,7 @@ public class Negoita : MonoBehaviour
 
 	Vector3 startPosition;
 
-	float positionFactor = 0.0f;
+	float verticalFactor = 0.0f;
 
 	float horizontalFactor = 0.0f;
 
@@ -67,51 +67,52 @@ public class Negoita : MonoBehaviour
 
 		if(Input.GetKey("w"))
 		{
-			transform.position += transform.forward * speedModifier;
-			/*positionFactor += speedModifier;
-			if(positionFactor > 1.0f)
+			//transform.position += transform.forward * speedModifier;
+			verticalFactor += speedModifier;
+			if(verticalFactor > 1.0f)
 			{
-				positionFactor = 1.0f;
-			}*/
+				verticalFactor = 1.0f;
+			}
 
 			hasMoved = true;
 		}
 		else if(Input.GetKey("s"))
 		{
-			transform.position -= transform.forward * speedModifier;
-			/*positionFactor -= speedModifier;
-			if(positionFactor < -1.0f)
+			//transform.position -= transform.forward * speedModifier;
+			verticalFactor -= speedModifier;
+			if(verticalFactor < -1.2f)
 			{
-				positionFactor = -1.0f;
-			}*/
+				verticalFactor = -1.2f;
+			}
 
 			hasMoved = true;
 		}
 
-		if(Input.GetKey("a"))
+		const float horizontalModifier = 0.4f;
+		if(Input.GetKey("d"))
 		{
-			transform.position -= transform.right * speedModifier;
-			/*positionFactor += speedModifier;
-			if(positionFactor > 1.0f)
+			//transform.position -= transform.right * speedModifier;
+			horizontalFactor += speedModifier;
+			if(horizontalFactor > horizontalModifier)
 			{
-				positionFactor = 1.0f;
-			}*/
+				horizontalFactor = horizontalModifier;
+			}
 
 			hasMoved = true;
 		}
-		else if(Input.GetKey("d"))
+		else if(Input.GetKey("a"))
 		{
-			transform.position += transform.right * speedModifier;
-			/*positionFactor -= speedModifier;
-			if(positionFactor < -1.0f)
+			//transform.position += transform.right * speedModifier;
+			horizontalFactor -= speedModifier;
+			if(horizontalFactor < -horizontalModifier)
 			{
-				positionFactor = -1.0f;
-			}*/
+				horizontalFactor = -horizontalModifier;
+			}
 
 			hasMoved = true;
 		}
 
-		//transform.position = startPosition + positionFactor * new Vector3(0.0f, 0.0f, 5.5f);
+		transform.position = startPosition + verticalFactor * transform.forward * 5.5f + horizontalFactor * transform.right * 5.5f;
 
 		if(hasMoved)
 		{
@@ -167,7 +168,7 @@ public class Negoita : MonoBehaviour
 		if(border == null)
 			return;
 
-		transform.position = lastInsidePosition;
+		//transform.position = lastInsidePosition;
 
 		wasRemoved = true;
 	}
