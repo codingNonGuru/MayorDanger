@@ -6,9 +6,6 @@ using UnityEngine.UI;
 public class StartMenu : MonoBehaviour 
 {
 	[SerializeField]
-	List<Sprite> textures = null;
-
-	[SerializeField]
 	Image title = null;
 
 	[SerializeField]
@@ -25,11 +22,11 @@ public class StartMenu : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		title.sprite = textures[textureIndex / 3];
+		/*title.sprite = textures[textureIndex / 3];
 
 		textureIndex++;
 		if(textureIndex == textures.Count * 3)
-			textureIndex = 0;
+			textureIndex = 0;*/
 	}
 
 	public void PressPlay()
