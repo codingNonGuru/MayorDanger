@@ -252,13 +252,16 @@ public class SpawnManager : MonoBehaviour
 		{
 			for(int j = 0; j < group.Depth; ++j)
 			{
+				float radius = UnityEngine.Random.Range(0.0f, 0.3f);
+				float angle = UnityEngine.Random.Range(0.0f, 6.2831f);
+
 				var currentOffset = (float)i - offset;
 				currentOffset *= 1.3f;
 				var citizenObject = Instantiate(citizenPrefab);
 				citizenObject.transform.position = new Vector3(
-					sourcePosition.x + (float)j,
+					sourcePosition.x + (float)j + Mathf.Cos(angle) * radius,
 					citizenObject.transform.position.y, 
-					sourcePosition.z + group.StartPositionFactor * 5.5f + currentOffset);
+					sourcePosition.z + group.StartPositionFactor * 5.5f + currentOffset + Mathf.Sin(angle) * radius);
 
 				var citizen = citizenObject.GetComponent<Citizen>();
 				citizen.Camp = picketCamp;
