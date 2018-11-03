@@ -16,7 +16,7 @@ public class Negoita : MonoBehaviour
 	[SerializeField]
 	List <Texture> textures = null;
 
-	const float speedModifier = 0.02f;
+	const float speedModifier = 0.1f;
 
 	const float shootCooldown = 0.3f;
 
@@ -31,6 +31,8 @@ public class Negoita : MonoBehaviour
 	Vector3 startPosition;
 
 	float positionFactor = 0.0f;
+
+	float horizontalFactor = 0.0f;
 
 	void Start()
 	{
@@ -65,26 +67,51 @@ public class Negoita : MonoBehaviour
 
 		if(Input.GetKey("w"))
 		{
-			positionFactor += speedModifier;
+			transform.position += transform.forward * speedModifier;
+			/*positionFactor += speedModifier;
 			if(positionFactor > 1.0f)
 			{
 				positionFactor = 1.0f;
-			}
+			}*/
 
 			hasMoved = true;
 		}
 		else if(Input.GetKey("s"))
 		{
-			positionFactor -= speedModifier;
+			transform.position -= transform.forward * speedModifier;
+			/*positionFactor -= speedModifier;
 			if(positionFactor < -1.0f)
 			{
 				positionFactor = -1.0f;
-			}
+			}*/
 
 			hasMoved = true;
 		}
 
-		transform.position = startPosition + positionFactor * new Vector3(0.0f, 0.0f, 5.5f);
+		if(Input.GetKey("a"))
+		{
+			transform.position -= transform.right * speedModifier;
+			/*positionFactor += speedModifier;
+			if(positionFactor > 1.0f)
+			{
+				positionFactor = 1.0f;
+			}*/
+
+			hasMoved = true;
+		}
+		else if(Input.GetKey("d"))
+		{
+			transform.position += transform.right * speedModifier;
+			/*positionFactor -= speedModifier;
+			if(positionFactor < -1.0f)
+			{
+				positionFactor = -1.0f;
+			}*/
+
+			hasMoved = true;
+		}
+
+		//transform.position = startPosition + positionFactor * new Vector3(0.0f, 0.0f, 5.5f);
 
 		if(hasMoved)
 		{
